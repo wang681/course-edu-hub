@@ -1,0 +1,9 @@
+﻿{
+    "id":  "course-edu-hub",
+    "name":  "Course Edu Hub",
+    "category":  "education",
+    "version":  "1.0.0",
+    "license":  "MIT",
+    "description":  "For education use cases with course list, instructor section, and signup.",
+    "createdAt":  "2026-03-30T22:38:58+08:00"
+}
