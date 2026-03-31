@@ -3,138 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Course Edu Hub - Preview</title>
+    <title>Course Edu Hub Preview</title>
     <style>
-      :root {
-        --accent: #166534;
-        --text: #0f172a;
-        --muted: #475569;
-        --bg: #f8fafc;
-        --card: #ffffff;
-        --line: #e2e8f0;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-        color: var(--text);
-        background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
-      }
-      .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-      .nav {
-        display: flex; align-items: center; justify-content: space-between;
-        padding: 18px 0;
-      }
-      .brand { font-size: 20px; font-weight: 700; color: var(--text); }
-      .menu { display: flex; gap: 16px; color: var(--muted); font-size: 14px; }
-      .hero {
-        margin-top: 20px;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 42px;
-        box-shadow: 0 16px 50px rgba(15, 23, 42, 0.08);
-      }
-      h1 { margin: 0; font-size: 44px; line-height: 1.1; }
-      .sub { margin: 16px 0 24px; color: var(--muted); font-size: 20px; line-height: 1.5; max-width: 760px; }
-      .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-      .btn {
-        border: none; border-radius: 10px; padding: 11px 16px; font-weight: 600;
-        cursor: pointer; text-decoration: none; display: inline-block;
-      }
-      .btn-primary { background: var(--accent); color: white; }
-      .btn-secondary { background: #eef2ff; color: #1e293b; }
-      .grid {
-        margin-top: 20px;
-        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
-      }
-      .card {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 18px;
-      }
-      .card h3 { margin: 0 0 8px; font-size: 18px; }
-      .card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
-      .section { margin-top: 20px; }
-      .section h2 { margin: 0 0 10px; font-size: 24px; }
-      .section p { margin: 0; color: var(--muted); line-height: 1.7; }
-      .feature-list { margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-      .feature {
-        background: #f8fafc;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 14px;
-      }
-      .footer {
-        margin: 26px 0 36px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      @media (max-width: 900px) {
-        h1 { font-size: 34px; }
-        .grid { grid-template-columns: 1fr; }
-        .feature-list { grid-template-columns: 1fr; }
-        .hero { padding: 24px; }
-      }
+      :root { --bg:#f5fbf6; --ink:#0f2b14; --accent:#166534; --line:#d3ead9; --muted:#3d5f45; }
+      *{box-sizing:border-box;}
+      body{margin:0;font-family:"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);}
+      .wrap{max-width:1140px;margin:0 auto;padding:20px 20px 40px;}
+      .top{display:flex;justify-content:space-between;align-items:center;}
+      .brand{font-size:22px;font-weight:800;}
+      .menu{display:flex;gap:16px;color:#44674c;}
+      .hero{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;}
+      h1{margin:0;font-size:42px;}
+      .lead{margin-top:12px;font-size:19px;color:var(--muted);line-height:1.65;max-width:760px;}
+      .cta{margin-top:18px;display:flex;gap:10px;}
+      .btn{padding:10px 15px;border-radius:10px;text-decoration:none;font-weight:700;}
+      .a{background:var(--accent);color:#fff;} .b{background:#e7f4eb;color:#175637;}
+      .layout{margin-top:14px;display:grid;grid-template-columns:1.4fr 1fr;gap:12px;}
+      .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;}
+      .courses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px;}
+      .course{background:#f6fcf7;border:1px solid #d9efdf;border-radius:10px;padding:10px;}
+      .course b{display:block;}
+      .instructor{display:flex;gap:10px;margin-top:10px;}
+      .avatar{width:44px;height:44px;border-radius:50%;background:#d8efdf;display:grid;place-items:center;font-weight:800;color:#1d6d3f;}
+      .path li{margin-bottom:8px;}
+      @media (max-width:950px){ .layout{grid-template-columns:1fr;} .courses{grid-template-columns:1fr;} h1{font-size:34px;} }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <header class="nav">
+      <header class="top">
         <div class="brand">Course Edu Hub</div>
-        <nav class="menu">
-          <span>Home</span>
-          <span>Features</span>
-          <span>Cases</span>
-          <span>Contact</span>
-        </nav>
+        <nav class="menu"><span>Courses</span><span>Instructors</span><span>Schedule</span><span>Enroll</span></nav>
       </header>
 
-      <main class="hero">
-        <h1>Course Edu Hub</h1>
-        <p class="sub">An education template with course catalog, instructors and enrollment CTA.</p>
-        <div class="cta-row">
-          <a href="#" class="btn btn-primary">Start With This Template</a>
-          <a href="#" class="btn btn-secondary">View Documentation</a>
-        </div>
-      </main>
-
-      <section class="grid section">
-        <article class="card">
-          <h3>Ready-to-Deploy Structure</h3>
-          <p>Comes with homepage sections, content blocks and a clean information hierarchy.</p>
-        </article>
-        <article class="card">
-          <h3>Cloudflare Friendly</h3>
-          <p>Designed to work with Pages, Workers, D1 and KV workflow in your platform strategy.</p>
-        </article>
-        <article class="card">
-          <h3>Commercial Reuse</h3>
-          <p>Template metadata and versioning are prepared for production deployment and updates.</p>
-        </article>
+      <section class="hero">
+        <h1>Learning experience template for modern training programs.</h1>
+        <p class="lead">Structured for cohorts, self-paced modules, instructor highlights, and enrollment conversion paths.</p>
+        <div class="cta"><a class="btn a" href="#">Browse Courses</a><a class="btn b" href="#">Get Syllabus PDF</a></div>
       </section>
 
-      <section class="section card">
-        <h2>What You Can Customize</h2>
-        <p>Swap brand assets, update copy, connect forms, and map routes to your deployment pipeline.</p>
-        <div class="feature-list">
-          <div class="feature">Hero messaging and value proposition</div>
-          <div class="feature">Feature modules and media blocks</div>
-          <div class="feature">Case study and trust sections</div>
-          <div class="feature">Contact CTA and conversion area</div>
-        </div>
+      <section class="layout">
+        <article class="card">
+          <h2 style="margin:0;">Popular Tracks</h2>
+          <div class="courses">
+            <div class="course"><b>Edge Engineering Bootcamp</b><span>8 weeks 路 Intermediate</span></div>
+            <div class="course"><b>Product Analytics Foundations</b><span>6 weeks 路 Beginner</span></div>
+            <div class="course"><b>AI Workflow Design Lab</b><span>4 weeks 路 Advanced</span></div>
+            <div class="course"><b>Growth Content Systems</b><span>5 weeks 路 Intermediate</span></div>
+          </div>
+        </article>
+        <aside class="card">
+          <h2 style="margin:0;">Instructor Snapshot</h2>
+          <div class="instructor"><div class="avatar">AL</div><div><b>Ana Li</b><div style="color:#4a6950;">Curriculum Lead, former platform architect.</div></div></div>
+          <div class="instructor"><div class="avatar">MR</div><div><b>Mike Ross</b><div style="color:#4a6950;">Head of Growth, B2B SaaS scaling advisor.</div></div></div>
+        </aside>
       </section>
 
-      <section class="section card">
-        <h2>Deployment Notes</h2>
-        <p>This preview demonstrates the visual template shell. Content and routes are applied by your deployment APIs in user accounts.</p>
+      <section class="card" style="margin-top:12px;">
+        <h2 style="margin:0 0 8px;">Sample Learning Path</h2>
+        <ol class="path" style="margin:0; color:#3f5f47; line-height:1.8;">
+          <li>Week 1: Foundations and baseline assessment</li>
+          <li>Week 2-3: Guided exercises and peer review</li>
+          <li>Week 4-6: Applied project with mentor checkpoints</li>
+          <li>Week 7+: Certification deliverables and capstone demo</li>
+        </ol>
       </section>
-
-      <footer class="footer">
-        Template preview generated for Mirror-X Template Factory
-      </footer>
     </div>
   </body>
 </html>
